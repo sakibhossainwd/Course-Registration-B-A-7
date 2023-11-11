@@ -1,0 +1,20 @@
+.cart-container{
+    background-color: #ffff;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.ramaining-hr{
+    color: rgb(34, 14, 218);
+    font-size: 20px;
+}
+.cart-container h3{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+h2{
+    margin: 0;
+}
+.cart-container ol{
+    padding-left: 15px;
+}
