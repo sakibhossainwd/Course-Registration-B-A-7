@@ -2,8 +2,14 @@
 import React from 'react';
 import './Courses.css'
 
-const Courses = ({course}) => {
-    const {cover, title, details, price, creadit} = course
+const Courses = ({course, selectedCourse, setselectedCourse}) => {
+    const {cover, title, details, price, creadit} = course;
+
+    const selectedCourseHandler = (select) => {
+        const newCourses = [...selectedCourse, select];
+        setselectedCourse(newCourses);
+    }
+
     return (
         <div>
             <div className="course">
@@ -15,10 +21,10 @@ const Courses = ({course}) => {
                         <p>Price: {price}</p>
                     </div>
                     <div className="creadit">
-                        <p>Creadit: {creadit}</p>
+                        <p>Creadit: {creadit} hr</p>
                     </div>
                 </div>
-                <button>Select</button>
+                <button onClick={() => selectedCourseHandler(course)}>Select</button>
             </div>
         </div>
     );

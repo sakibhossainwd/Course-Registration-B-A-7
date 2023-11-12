@@ -1,50 +1,56 @@
 [
     {
         "id": "01",
-        "cover": "../images/Rectangle 2-5.png",
+        "cover": "../images/Rectangle 2-2.png",
         "title": "Introduction to C Programming",
         "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
         "price": 1500,
-        "creadit": 1 
+        "creadit": 1,
+        "quantity":0 
     },
     {
         "id": "02",
-        "cover": "../images/Rectangle 2-5.png",
-        "title": "Introduction to C Programming",
+        "cover": "../images/Rectangle 2-3.png",
+        "title": "Introduction to Algorithms",
         "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "price": 1500,
-        "creadit": 1 
+        "price": 25000,
+        "creadit": 2,
+        "quantity":0
     },
     {
         "id": "03",
-        "cover": "../images/Rectangle 2-5.png",
-        "title": "Introduction to C Programming",
+        "cover": "../images/Rectangle 2-4.png",
+        "title": "Introduction to C++ for DSA",
         "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "price": 1500,
-        "creadit": 1 
+        "price": 10000,
+        "creadit": 10,
+        "quantity":0
     },
     {
         "id": "04",
-        "cover": "../images/Rectangle 2-5.png",
-        "title": "Introduction to C Programming",
+        "cover": "../images/Rectangle 3.png",
+        "title": "Basic Data Structures",
         "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "price": 1500,
-        "creadit": 1 
+        "price": 350000,
+        "creadit": 5,
+        "quantity":0 
     },
     {
         "id": "05",
-        "cover": "../images/Rectangle 2-5.png",
-        "title": "Introduction to C Programming",
+        "cover": "../images/Rectangle 2.png",
+        "title": "Introduction to OOP Python",
         "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "price": 1500,
-        "creadit": 1 
+        "price": 19000,
+        "creadit": 5,
+        "quantity":0 
     },
     {
         "id": "06",
         "cover": "../images/Rectangle 2-5.png",
-        "title": "Introduction to C Programming",
+        "title": "Software Engineering",
         "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "price": 1500,
-        "creadit": 1 
+        "price": 23000,
+        "creadit": 2,
+        "quantity":0 
     }
 ]

@@ -7,6 +7,8 @@ import Cart from '../Cart/Cart'
 const Institute = () => {
     // This state is for get data from json file
     const [courses, setCourses] = useState([]);
+    // Thos state for get selected data
+    const [selectedCourse, setselectedCourse] = useState([]);
 
     useEffect( () => {
         fetch('../../../FakeDB/courses.json')
@@ -21,11 +23,13 @@ const Institute = () => {
                     courses.map(course => <Courses
                     key={course.id}
                     course={course}
+                    selectedCourse={selectedCourse}
+                    setselectedCourse={setselectedCourse}
                     ></Courses>)
                 }
             </div>
             <div className="cart-container">
-                <Cart></Cart>
+                <Cart selectedCourse={selectedCourse} setselectedCourse={setselectedCourse}></Cart>
             </div>
         </div>
        
