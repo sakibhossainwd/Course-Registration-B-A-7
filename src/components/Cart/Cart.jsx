@@ -7,12 +7,10 @@ const Cart = ({selectedCourse}) => {
 
     let credit = 0;
     let total = 0;
-    let bookedCourse = ''
     for (const  course of selectedCourse){
         // console.log(course)
         credit = credit + course.creadit;
-        total = total + course.price;
-        bookedCourse = bookedCourse + course.title
+        total = total + course.price
     }
 
     return (
@@ -23,7 +21,7 @@ const Cart = ({selectedCourse}) => {
                 <h2>Course Name:-</h2>
                 <ol>
                     {
-                        <BookedCourse bookedCourse={bookedCourse}></BookedCourse>
+                        <BookedCourse selectedCourse={selectedCourse}></BookedCourse>
                     }
                 </ol>
                 <h3>Total Credit Hour: {credit} hr</h3>
