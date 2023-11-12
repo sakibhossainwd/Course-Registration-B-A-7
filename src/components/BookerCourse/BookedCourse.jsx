@@ -1,15 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-const BookedCourse = ({selectedCourse}) => {
-    console.log(selectedCourse.title)
-    let title = " "
-    for (const course of selectedCourse){
-         title = course.title
-    }
+const BookedCourse = ({bookedCourse}) => {
+    
     return (
         <div>
-            <li>{title}</li>
+            <li>{bookedCourse.title}</li>
         </div>
     );
 };

@@ -21,7 +21,7 @@ const Cart = ({selectedCourse}) => {
                 <h2>Course Name:-</h2>
                 <ol>
                     {
-                        <BookedCourse selectedCourse={selectedCourse}></BookedCourse>
+                        selectedCourse.map(bookedCourse => <BookedCourse key={bookedCourse.id} bookedCourse={bookedCourse}></BookedCourse>)
                     }
                 </ol>
                 <h3>Total Credit Hour: {credit} hr</h3>
