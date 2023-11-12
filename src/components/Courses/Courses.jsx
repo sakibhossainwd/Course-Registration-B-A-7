@@ -1,13 +1,21 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './Courses.css'
+import { toast } from 'react-toastify';
 
 const Courses = ({course, selectedCourse, setselectedCourse}) => {
     const {cover, title, details, price, creadit} = course;
 
     const selectedCourseHandler = (select) => {
+        const takenCourse = selectedCourse.find(selectCourse => selectCourse.id);
+        console.log(takenCourse);
+        
         const newCourses = [...selectedCourse, select];
         setselectedCourse(newCourses);
+        toast.success("Selected successfull", {
+            autoClose:1000,
+            position: toast.POSITION.BOTTOM_RIGHT
+        })
     }
 
     return (

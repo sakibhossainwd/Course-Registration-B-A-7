@@ -11,7 +11,7 @@ const Institute = () => {
     const [selectedCourse, setselectedCourse] = useState([]);
 
     useEffect( () => {
-        fetch('../../../dist/assets/courses.json')
+        fetch('../../../FakeDB/courses.json')
         .then(res => res.json())
         .then(data => setCourses(data))
     } ,[])
