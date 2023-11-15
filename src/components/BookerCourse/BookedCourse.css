@@ -1,7 +1,15 @@
 .bookedCourse{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 .deleteIcon{
     color: red;
+    cursor: pointer;
+    background-color: rgb(212, 234, 255);
+    width: 5%;
+    border: none;
+    display: flex;
+    justify-content: center;
 }

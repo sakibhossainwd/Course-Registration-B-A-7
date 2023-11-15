@@ -5,14 +5,32 @@ import { toast } from 'react-toastify';
 
 const Courses = ({course, selectedCourse, setselectedCourse}) => {
     const {cover, title, details, price, creadit} = course;
-
+    console.log('all course', course)
     const selectedCourseHandler = (select) => {
-        const takenCourse = selectedCourse.find(selectCourse => selectCourse.id);
-        console.log(takenCourse);
+        // const takenCourse = selectedCourse.find(selectCourse => selectCourse.id);
+        // console.log(takenCourse);
+
+        //check whether the course already exist in the boooked course
+        // const isExist = selectedCourse.find(item => item.id === select.id); 
+        // if(isExist){
+        //    return  toast.error('The course already exist!', {autoClose:2000});
+        // }
+
+        //solution - 2
+     
+        let ids = [];
+        selectedCourse.forEach(item => {
+            ids.push(item.id)
+        });
+        
+        const isBooked = ids.includes(select.id);
+        if(isBooked){
+            return  toast.error('The course already exist!', {autoClose:2000});
+        }
         
         const newCourses = [...selectedCourse, select];
         setselectedCourse(newCourses);
-        toast.success("Selected successfull", {
+        toast.success("Selected successful", {
             autoClose:1000,
             position: toast.POSITION.BOTTOM_RIGHT
         })

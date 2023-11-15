@@ -3,7 +3,7 @@ import React from 'react';
 import './Cart.css'
 import BookedCourse from '../BookerCourse/BookedCourse';
 
-const Cart = ({selectedCourse}) => {
+const Cart = ({selectedCourse, setselectedCourse}) => {
 
     let credit = 0;
     let total = 0;
@@ -21,7 +21,7 @@ const Cart = ({selectedCourse}) => {
                 <h2>Course Name:-</h2>
                 <ol>
                     {
-                        selectedCourse.map(bookedCourse => <BookedCourse key={bookedCourse.id} bookedCourse={bookedCourse}></BookedCourse>)
+                        selectedCourse.map(bookedCourse => <BookedCourse key={bookedCourse.id} selectedCourse={selectedCourse} setselectedCourse={setselectedCourse} bookedCourse={bookedCourse}></BookedCourse>)
                     }
                 </ol>
                 <h3>Total Credit Hour: {credit} hr</h3>
