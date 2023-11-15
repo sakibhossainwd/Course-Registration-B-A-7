@@ -1,0 +1,7 @@
+.bookedCourse{
+    display: flex;
+    justify-content: space-between;
+}
+.deleteIcon{
+    color: red;
+}

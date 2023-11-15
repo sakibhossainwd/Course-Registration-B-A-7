@@ -10,21 +10,21 @@ const Institute = () => {
     // Thos state for get selected data
     const [selectedCourse, setselectedCourse] = useState([]);
 
-    useEffect( () => {
-        fetch('../../../FakeDB/courses.json')
-        .then(res => res.json())
-        .then(data => setCourses(data))
-    } ,[])
+    useEffect(() => {
+        fetch('courses.json')
+            .then(res => res.json())
+            .then(data => setCourses(data))
+    }, [])
 
     return (
         <div className="insitute-container">
             <div className="courses-container">
                 {
                     courses.map(course => <Courses
-                    key={course.id}
-                    course={course}
-                    selectedCourse={selectedCourse}
-                    setselectedCourse={setselectedCourse}
+                        key={course.id}
+                        course={course}
+                        selectedCourse={selectedCourse}
+                        setselectedCourse={setselectedCourse}
                     ></Courses>)
                 }
             </div>
@@ -32,7 +32,7 @@ const Institute = () => {
                 <Cart selectedCourse={selectedCourse} setselectedCourse={setselectedCourse}></Cart>
             </div>
         </div>
-       
+
     );
 };
 
